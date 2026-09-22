@@ -27,7 +27,7 @@
         static bool IsPalindrome(string s, int left = 0, int right = 0)
         {
             right = s.Length - 1 - left;
-            if (left == right || left + 1 == right) return true;
+            if (left >= right) return true;
 
             if (s[left] != s[right]) return false;
             
