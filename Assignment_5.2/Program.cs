@@ -9,11 +9,12 @@
             return words[words.Length - 1].Length;
         }
 
-        static void PrintNatualNumbers(int n, int count = 1)
+        static void PrintNaturalNumbers(int n)
         {
-            if (count == n + 1) return;
-            Console.Write($"{(count)} " );
-            PrintNatualNumbers(n, count = count + 1);
+            if (n < 1) return;
+
+            PrintNaturalNumbers(n - 1);
+            Console.Write($"{n} ");
         }
 
         static void PrintNaturalNumbersReverse(int n)
@@ -56,7 +57,7 @@
                 if (isVal) break;
             }
 
-            PrintNatualNumbers(result);
+            PrintNaturalNumbers(result);
 
 
             Console.WriteLine("\n\nThis prints that first natural numbers in reverse.");
